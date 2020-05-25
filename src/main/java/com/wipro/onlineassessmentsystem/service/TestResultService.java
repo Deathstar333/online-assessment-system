@@ -5,9 +5,7 @@ import com.wipro.onlineassessmentsystem.repository.TestResultRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class TestResultService {
@@ -36,6 +34,7 @@ public class TestResultService {
     public List<TestResult> getAllTestResults() {
         List<TestResult> tests = new ArrayList<>();
         testResultRepository.findAll().forEach(tests::add);
+        Collections.sort(tests, new testComp());
         return tests;
     }
 
@@ -59,5 +58,13 @@ public class TestResultService {
                 score += 10;
         }
         return score;
+    }
+
+    private class testComp implements Comparator<TestResult> {
+
+        @Override
+        public int compare(TestResult o1, TestResult o2) {
+            return o1.getTestDate().compareTo(o2.getTestDate());
+        }
     }
 }
