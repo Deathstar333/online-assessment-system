@@ -23,6 +23,6 @@
         <input type="submit" id="login" value="LOGIN">
     </form>
     <label>New User?</label>
-    <a href="registration">register here</a>
+    <a href="/register">register here</a>
 </body>
 </html>
