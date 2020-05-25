@@ -1,5 +1,6 @@
 package com.wipro.onlineassessmentsystem.controller;
 
+import com.wipro.onlineassessmentsystem.component.LoggedInUser;
 import com.wipro.onlineassessmentsystem.model.User;
 import com.wipro.onlineassessmentsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private LoggedInUser loggedInUser;
+
     @RequestMapping(value = "/login/do", method = RequestMethod.POST)
     public String returnLogin(HttpServletRequest request, HttpServletResponse response) {
         String formEmail = request.getParameter("email");
@@ -27,17 +31,18 @@ public class UserController {
         if(user == null) {
             return "invalidUser";
         }
-        else if(!user.getPassword().equals(formPass)) {
-            System.out.println(user.getPassword());
-            System.out.println(formPass);
+        if(!user.getPassword().equals(formPass)) {
             return "invalidPass";
         }
-        else if(user.getUserType().equals("candidate")){
+
+        loggedInUser.setPresent(true);
+        loggedInUser.setEmail(user.getEmail());
+        loggedInUser.setUserType(user.getUserType());
+
+        if(user.getUserType().equals("candidate")){
             return "candidateLogin";
         }
-        else {
-            return "adminLogin";
-        }
+        return "adminLogin";
     }
 
     @RequestMapping(value = "/users/all", method = RequestMethod.GET)

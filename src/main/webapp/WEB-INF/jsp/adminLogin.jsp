@@ -14,7 +14,7 @@
 <h2 id="msg">Select Reports</h2>
 <a href="/users/all">View list of all candidates</a>
 <br>
-<a href="/allTestResults">View list of all tests taken</a>
+<a href="/tests/all">View list of all tests taken</a>
 <br>
 <a href="/index">Logout</a>
 

@@ -16,7 +16,7 @@
 <br>
 <br>
 <table>
-    <form action="/registration/do" method="post">
+    <form action="registration/do" method="post">
         <tr>
             <td><label for="firstname">First Name: </label></td>
             <td><input type="text" id="firstname" name="firstname" pattern="[a-zA-Z]+" title="1 or more alphabets only" required /></td>

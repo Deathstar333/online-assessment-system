@@ -13,8 +13,8 @@
 <body>
 <div id="msg">Select the Test</div>
 <br>
-<a href="springAssessment">Spring Assessment</a>
-<a href="hibernateAssessment">Hibernate Assessment</a>
+<a href="/springAssessment">Spring Assessment</a><br>
+<a href="/hibernateAssessment">Hibernate Assessment</a>
 <br>
 <a href="/index">Logout</a>
 
