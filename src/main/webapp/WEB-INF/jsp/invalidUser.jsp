@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 id="msg">Sorry you are not a registered User !!!</h1>
-<a href="/index">Home Page</a>
+<a href="${pageContext.request.contextPath}/index">Home Page</a>
 </body>
 </html>

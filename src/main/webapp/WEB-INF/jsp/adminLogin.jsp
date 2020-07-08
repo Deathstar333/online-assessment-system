@@ -12,11 +12,11 @@
 </head>
 <body>
 <h2 id="msg">Select Reports</h2>
-<a href="/users/all">View list of all candidates</a>
+<a href="${pageContext.request.contextPath}/users/all">View list of all candidates</a>
 <br>
-<a href="/tests/all">View list of all tests taken</a>
+<a href="${pageContext.request.contextPath}/tests/all">View list of all tests taken</a>
 <br>
-<a href="/index">Logout</a>
+<a href="${pageContext.request.contextPath}/index">Logout</a>
 
 </body>
 </html>

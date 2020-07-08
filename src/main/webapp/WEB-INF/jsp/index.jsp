@@ -23,6 +23,6 @@
         <input type="submit" id="login" value="LOGIN">
     </form>
     <label>New User?</label>
-    <a href="/register">register here</a>
+    <a href="${pageContext.request.contextPath}/register">register here</a>
 </body>
 </html>

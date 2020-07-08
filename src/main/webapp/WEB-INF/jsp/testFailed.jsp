@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 id="msg">Sorry !!! Better Luck Next Time !!!</h1>
-<a href="/index">Exit</a>
+<a href="${pageContext.request.contextPath}/index">Exit</a>
 </body>
 </html>

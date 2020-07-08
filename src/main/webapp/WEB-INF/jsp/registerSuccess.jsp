@@ -14,7 +14,7 @@
 <h3>Registered Successfully!!!</h3>
 ${firstname} ${lastname}
 <br>
-<a href="/index">LOGIN</a>
+<a href="${pageContext.request.contextPath}/index">LOGIN</a>
 
 </body>
 </html>

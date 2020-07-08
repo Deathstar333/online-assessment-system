@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 id="msg">Sorry your Password is Wrong !!! Login again !!!</h1>
-<a href="/index">login again</a>
+<a href="${pageContext.request.contextPath}/index">login again</a>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>All User Details</title>
+    <title>All Test Details</title>
     <style>
         table, th, td {
             border: 1px solid black;

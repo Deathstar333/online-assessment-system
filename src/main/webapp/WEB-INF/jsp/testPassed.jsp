@@ -12,6 +12,6 @@
 </head>
 <body>
 <h1 id="msg">Congratulations !!! You have passed !!!</h1>
-<a href="/index">Exit</a>
+<a href="${pageContext.request.contextPath}/index">Exit</a>
 </body>
 </html>
